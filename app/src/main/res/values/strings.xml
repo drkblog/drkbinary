@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">drkbinary</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">drkBinary</string>
+    <string name="placeholder">\?</string>
+    <string name="result_placeholder">result</string>
+    <string name="validate" >Validate</string>
+</resources>
