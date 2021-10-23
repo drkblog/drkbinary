@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="ar.com.drk.drkbinary.FirstFragment"
+        android:name="ar.com.drk.drkbinary.PlayfieldFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/playfield"/>
+        tools:layout="@layout/playfield_fragment"/>
 </navigation>
