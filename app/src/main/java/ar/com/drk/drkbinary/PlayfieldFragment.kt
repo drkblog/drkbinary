@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import ar.com.drk.drkbinary.databinding.PlayfieldFragmentBinding
 
 /**
- * A simple [Fragment] subclass as the default destination in the navigation.
+ * Playfield
  */
 class PlayfieldFragment : Fragment() {
 
@@ -34,7 +34,8 @@ class PlayfieldFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setup()
+        reset()
+        // We want our input field to append numbers to the left
         binding.result.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 binding.result.setSelection(0)
@@ -61,12 +62,12 @@ class PlayfieldFragment : Fragment() {
             // Ignore it
         } finally {
             binding.result.text.clear()
-            setup()
+            reset()
         }
         Toast.makeText(context, "Wrong answer", Toast.LENGTH_LONG).show()
     }
 
-    private fun setup() {
+    private fun reset() {
         val setup = gameService.play()
         binding.firstNumber.text = intToBinaryString(setup.first)
         binding.secondNumber.text = intToBinaryString(setup.second)
