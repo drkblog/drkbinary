@@ -8,6 +8,8 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import ar.com.drk.drkbinary.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -38,8 +40,12 @@ class MainActivity : AppCompatActivity() {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
         return when (item.itemId) {
-            R.id.action_about -> true
+            R.id.action_about -> {
+                navController.navigate(R.id.action_PlayfieldFragment_to_AboutFragment)
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }

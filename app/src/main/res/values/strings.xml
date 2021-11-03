@@ -10,4 +10,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about_text">drkBinary simple game</string>
+    <string name="about_fragment_lable">About drkBinary</string>
+    <string name="drkbugs_logo">drkbugs logo</string>
+    <string name="drk_url">https://drk.com.ar</string>
 </resources>
