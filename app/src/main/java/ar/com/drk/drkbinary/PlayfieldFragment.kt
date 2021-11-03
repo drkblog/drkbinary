@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import ar.com.drk.drkbinary.databinding.PlayfieldFragmentBinding
+import ar.com.drk.drkbinary.game.GameService
 
 /**
  * Playfield
@@ -55,7 +56,7 @@ class PlayfieldFragment : Fragment() {
     private fun validate() {
         try {
             if (gameService.validate(binaryStringToInt(binding.result.text.toString()))) {
-                Toast.makeText(context, "Congratulations!", Toast.LENGTH_LONG).show()
+                binding.outcome.text = "Correct!"
                 return
             }
         } catch (e: Exception) {
@@ -64,7 +65,7 @@ class PlayfieldFragment : Fragment() {
             binding.result.text.clear()
             reset()
         }
-        Toast.makeText(context, "Wrong answer", Toast.LENGTH_LONG).show()
+        binding.outcome.text = "Wrong answer"
     }
 
     private fun reset() {
