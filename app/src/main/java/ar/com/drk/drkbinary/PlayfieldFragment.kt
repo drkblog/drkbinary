@@ -70,6 +70,7 @@ class PlayfieldFragment : Fragment() {
 
     private fun reset() {
         val setup = gameService.play()
+        binding.level.text = "Level " + gameService.level.displayValue()
         binding.firstNumber.text = intToBinaryString(setup.first)
         binding.secondNumber.text = intToBinaryString(setup.second)
     }

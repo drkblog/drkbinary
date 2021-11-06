@@ -12,4 +12,8 @@ class Level {
         val top = 0xF shl level
         return (0..top).random()
     }
+
+    fun displayValue() : String {
+        return level.toString()
+    }
 }
