@@ -18,7 +18,7 @@
         android:id="@+id/AboutFragment"
         android:name="ar.com.drk.drkbinary.AboutFragment"
         android:label="@string/about_fragment_lable"
-        tools:layout="@layout/fragment_about">
+        tools:layout="@layout/about_fragment">
         <action
             android:id="@+id/action_AboutFragment_to_PlayfieldFragment"
             app:destination="@id/PlayfieldFragment" />

@@ -13,4 +13,5 @@
     <string name="about_fragment_lable">About drkBinary</string>
     <string name="drkbugs_logo">drkbugs logo</string>
     <string name="drk_url">https://drk.com.ar</string>
+    <string name="version">v0.10</string>
 </resources>

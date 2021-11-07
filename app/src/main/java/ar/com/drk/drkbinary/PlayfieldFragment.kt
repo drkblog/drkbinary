@@ -1,6 +1,7 @@
 package ar.com.drk.drkbinary
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
@@ -56,7 +57,7 @@ class PlayfieldFragment : Fragment() {
     private fun validate() {
         try {
             if (gameService.validate(binaryStringToInt(binding.result.text.toString()))) {
-                binding.outcome.text = "Correct!"
+                setOutcome("Correct!")
                 return
             }
         } catch (e: Exception) {
@@ -65,7 +66,20 @@ class PlayfieldFragment : Fragment() {
             binding.result.text.clear()
             reset()
         }
-        binding.outcome.text = "Wrong answer"
+        setOutcome("Wrong answer")
+    }
+
+    private fun setOutcome(text : String) {
+        binding.outcome.text = text
+            object : CountDownTimer(1500, 100) {
+
+            override fun onTick(millisUntilFinished: Long) {
+            }
+
+            override fun onFinish() {
+                binding.outcome.text = ""
+            }
+        }.start()
     }
 
     private fun reset() {
