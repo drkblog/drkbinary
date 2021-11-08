@@ -8,8 +8,6 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import androidx.fragment.app.commit
-import androidx.fragment.app.replace
 import ar.com.drk.drkbinary.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
